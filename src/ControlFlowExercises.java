@@ -22,86 +22,83 @@ public class ControlFlowExercises {
 //        } while(i <= 100);
 
         // Powers Table
-//        System.out.println("Enter an integer: ");
+        System.out.println("Enter an integer: ");
         Scanner scan = new Scanner(System.in);
-//        int userNum = scan.nextInt();
+        int userNum = scan.nextInt();
 ////
 //
 //
 //        // titles
-//        System.out.printf("%10s", "number | ");
-//        System.out.printf(" %-5s", "square |");
-//        System.out.printf(" %-10s", "cubed");
+        System.out.printf("number | squared | cubed\n");
 //        // header border
-//        System.out.println();
-//        System.out.printf("%10s", "------ | ");
-//        System.out.printf(" %-5s", "------ |");
-//        System.out.printf(" %-10s", "-----");
-//        System.out.println();
+        System.out.printf("%-7s", "------ | ");
+        System.out.printf(" %-7s", "------- |");
+        System.out.printf(" %-6s", "----- ");
+        System.out.println();
 //        // table
-//        for(int i = 1; i <= userNum; i++) {
-//            System.out.printf("%10s", i + "       |   ");
-//            System.out.printf(" %-5s", i*i+ "   |  ");
-//            System.out.printf(" %-10s", i*i*i);
-//            System.out.println();
-//        }
+        for(int i = 1; i <= userNum; i++) {
+            System.out.printf("%7s|", i);
+            System.out.printf(" %-8s|", i*i);
+            System.out.printf(" %-5s", i*i*i);
+            System.out.println();
+        }
 
         // grades
-        System.out.println("What's your grade percent: ?");
-        int userGrade = scan.nextInt();
-
-
-            if(userGrade >= 88) {
-                if(userGrade >= 95) {
-
-                    System.out.println("A+");
-                }
-                else if(userGrade >= 92) {
-
-                    System.out.println("A");
-                } else {
-
-                    System.out.println("A-");
-                }
-            }
-            else if(userGrade >= 80) {
-                if(userGrade >= 85) {
-                    System.out.println("B+");
-                }
-                else if(userGrade >= 83) {
-                    System.out.println("B");
-                } else {
-
-                    System.out.println("B-");
-                }
-            }
-            else if(userGrade >= 67) {
-                if(userGrade >= 76) {
-                    System.out.println("C+");
-                }
-                else if(userGrade >= 70) {
-                    System.out.println("C");
-                }
-                else {
-                    System.out.println("C-");
-                }
-            }
-            else if(userGrade >= 60) {
-                if(userGrade >= 64) {
-                    System.out.println("D+");
-                }
-               else if(userGrade >= 62) {
-                    System.out.println("D");
-                }
-                else {
-                    System.out.println("D-");
-                }
-            }
-        else if(userGrade >= 60) {
-            System.out.println("F");
-        }else {
-                System.out.println("Error");
-        }
+//        System.out.println("What's your grade percent: ?");
+//        int userGrade = scan.nextInt();
+//
+//
+//            if(userGrade >= 88) {
+//                if(userGrade >= 95) {
+//
+//                    System.out.println("A+");
+//                }
+//                else if(userGrade >= 92) {
+//
+//                    System.out.println("A");
+//                } else {
+//
+//                    System.out.println("A-");
+//                }
+//            }
+//            else if(userGrade >= 80) {
+//                if(userGrade >= 85) {
+//                    System.out.println("B+");
+//                }
+//                else if(userGrade >= 83) {
+//                    System.out.println("B");
+//                } else {
+//
+//                    System.out.println("B-");
+//                }
+//            }
+//            else if(userGrade >= 67) {
+//                if(userGrade >= 76) {
+//                    System.out.println("C+");
+//                }
+//                else if(userGrade >= 70) {
+//                    System.out.println("C");
+//                }
+//                else {
+//                    System.out.println("C-");
+//                }
+//            }
+//            else if(userGrade >= 60) {
+//                if(userGrade >= 64) {
+//                    System.out.println("D+");
+//                }
+//               else if(userGrade >= 62) {
+//                    System.out.println("D");
+//                }
+//                else {
+//                    System.out.println("D-");
+//                }
+//            }
+//        else if(userGrade >= 60) {
+//            System.out.println("F");
+//        }else {
+//                System.out.println("Error");
+//        }
 
 
 
