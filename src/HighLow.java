@@ -20,6 +20,7 @@ public class HighLow {
         }
 
         int counter = 1;
+        // I can also you while(true) here. The conditions becomes false once the loops hits the break statement.
         while (userInput != gameMaster){
             if(counter != 5) {
                 // If user's guess is less than the number, it outputs "HIGHER"
