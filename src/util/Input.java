@@ -2,31 +2,46 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+
+    public static void main(String[] args) {
+        Input input = new Input();
+        
+//        System.out.println(input.getInt(1, 10));
+//        System.out.println(input.getString("How are you today"));
+//        System.out.println(input.yesNo("Will there be world peace?"));
+    }
+
     private Scanner scanner;
 
     public Input() {
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        String userInput = this.scanner.nextLine();
+        String userInput = scanner.nextLine();
         return userInput;
     }
 
     public Boolean yesNo(String prompt) {
-        System.out.println(prompt);
-        String userInput = this.scanner.nextLine();
-        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
-            return true;
+        System.out.print(prompt);
+        String userInput = scanner.nextLine();
+        return (userInput.toLowerCase().startsWith("y"));
+    }
+
+    public int getInt() {
+        if(scanner.hasNextInt()) {
+            return scanner.nextInt();
         } else {
-            return false;
+            System.out.println("Invalid input");
         }
+
+        return getInt();
     }
 
     public int getInt(int min, int max) {
         System.out.println("Enter a number: ");
-        int userInput = this.scanner.nextInt();
+        int userInput = scanner.nextInt();
 
         if(userInput < min || userInput > max) {
 
@@ -34,9 +49,19 @@ public class Input {
         }
         return userInput;
     }
+    public double getDouble() {
+        if(scanner.hasNextDouble()) {
+            double userDouble = scanner.nextDouble();
+            scanner.nextLine();
+            return userDouble;
+        } else {
+            System.out.println("Invalid input");
+        }
+        return getDouble();
+    }
     public double getDouble(double min, double max) {
         System.out.println("Enter a number: ");
-        double userInput = this.scanner.nextInt();
+        double userInput = scanner.nextInt();
 
         if(userInput < min || userInput > max) {
 
@@ -45,12 +70,7 @@ public class Input {
         return userInput;
     }
 
-    public static void main(String[] args) {
-        Input input = new Input();
-//        System.out.println(input.getInt(1, 10));
-//        System.out.println(input.getString("How are you today"));
-//        System.out.println(input.yesNo("Will there be world peace?"));
-    }
+
 
 
 
