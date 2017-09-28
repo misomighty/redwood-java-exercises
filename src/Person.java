@@ -1,7 +1,8 @@
 public class Person {
 
     private String name;
-
+    // Using shadowing to pull the global name into the person method via aName parameter
+    // Also this is a constructor. It shares the same name as the class
     public Person(String aName) {
         name = aName;
     }
@@ -21,6 +22,7 @@ public class Person {
     }
 
     public static void main(String[] args){
+        // We defined our constructor as accepting a string parameter so it's required down here too with aName
         Person person = new Person("Jordan");
         System.out.println(person.getName());
         person.sayHello();
