@@ -24,7 +24,7 @@ public class Input {
     }
 
     public Boolean yesNo(String prompt) {
-        System.out.print(prompt);
+        System.out.print(prompt + " ");
         String userInput = scanner.nextLine();
         return (userInput.toLowerCase().startsWith("y"));
     }
@@ -42,10 +42,12 @@ public class Input {
     public int getInt(int min, int max) {
         System.out.println("Enter a number: ");
         int userInput = scanner.nextInt();
-
+        scanner.nextLine();
         if(userInput < min || userInput > max) {
 
             userInput = getInt(min, max);
+        } else {
+            System.out.println("Invalid input");
         }
         return userInput;
     }
@@ -66,6 +68,8 @@ public class Input {
         if(userInput < min || userInput > max) {
 
             userInput = getDouble(min, max);
+        } else {
+            System.out.println("Invalid input");
         }
         return userInput;
     }
