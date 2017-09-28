@@ -30,9 +30,10 @@ public class ConsoleExercises {
             double length = scan.nextInt();
             System.out.println("Height: ");
             double height = scan.nextInt();
-            System.out.println("area = " + width + " x " + length);
-            System.out.println("perimeter = (2 x " + width + ") + (" + " 2 x " + length + ")");
-            System.out.println("volume = " + length + " x " + width + " x " + height);
+            System.out.println("area = " + width + " x " + length + " = " + width*length);
+            System.out.println("perimeter = (2 x " + width + ") + (" + " 2 x " + length + ") = "
+                    + (2*width + 2*length));
+            System.out.println("volume = " + length + " x " + width + " x " + height + " = " + length*width*height);
 
 
 
