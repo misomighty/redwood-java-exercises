@@ -1,6 +1,7 @@
 package movies;
 import util.Input;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class MoviesApplication {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class MoviesApplication {
 
 
         do {
-            int option = input.getInt(0, 5);
+            int option = input.getInt(0, 6);
             switch (option) {
                 case 0:
                     System.out.println("Exiting");
@@ -31,7 +32,8 @@ public class MoviesApplication {
                     viewMovies("scifi", movies);
                     break;
                 case 6:
-                    addMovie();
+                    movies = addMovie(input, movies);
+                    break;
 
             }
 
@@ -51,12 +53,13 @@ public class MoviesApplication {
         }
     }
 
-//    public static void addMovie(Input input, String newTitle, String newCategory, Movie[] movies) {
-//        newTitle = input.getString("Enter a title: ");
-//        newCategory = input.getString("Enter a category: ");
-//
-//       Movie[] Arrays.copyOf(movies, movies.length+1);
-//
-//    }
+    public static Movie[] addMovie(Input input, Movie[] movies) {
+        String newTitle = input.getString("Enter a title: ");
+        String newCategory = input.getString("Enter a category: ");
+        movies = Arrays.copyOf(movies, movies.length+1);
+        movies[movies.length-1] = new Movie(newTitle, newCategory);
+        return movies;
+
+    }
 }
 
