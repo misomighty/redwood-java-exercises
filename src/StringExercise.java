@@ -24,7 +24,7 @@ public class StringExercise {
         System.out.println("Continue? y/n");
         String option = scan.nextLine();
         if(!option.equalsIgnoreCase("y")) {
-            break;
+            return;
         }
 
         //Get rid of the () and - from a phone number format, keep only a String with just he numbers, then grab only the area code (the first 3 digits).
