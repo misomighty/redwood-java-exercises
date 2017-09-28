@@ -1,9 +1,11 @@
 package movies;
-import movies.Movie;
 
 public class MoviesArray {
     public static Movie[] findAll() {
         return new Movie[]{
+                // An array where each index is a NEW MOVIE OBJECT
+                // Each new MOVIE OBJECT is calling it's constructor
+                // The Constructor requires 2 parameters (name, category)
             new Movie("Citizen Kane", "drama"),
             new Movie("Casablanca", "drama"),
             new Movie("The Godfather", "drama"),
