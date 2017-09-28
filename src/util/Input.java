@@ -44,10 +44,8 @@ public class Input {
         int userInput = scanner.nextInt();
         scanner.nextLine();
         if(userInput < min || userInput > max) {
-
-            userInput = getInt(min, max);
-        } else {
             System.out.println("Invalid input");
+            userInput = getInt(min, max);
         }
         return userInput;
     }
@@ -66,10 +64,9 @@ public class Input {
         double userInput = scanner.nextInt();
 
         if(userInput < min || userInput > max) {
-
-            userInput = getDouble(min, max);
-        } else {
             System.out.println("Invalid input");
+            userInput = getDouble(min, max);
+
         }
         return userInput;
     }
