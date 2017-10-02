@@ -66,7 +66,6 @@ public class Input {
         if(userInput < min || userInput > max) {
             System.out.println("Invalid input");
             userInput = getDouble(min, max);
-
         }
         return userInput;
     }

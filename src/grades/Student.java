@@ -1,25 +1,18 @@
 package grades;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Student {
 
-//    public static void main(String[] args) {
-//        ArrayList<Integer> grades = new ArrayList<>();
-//        Student student = new Student("Jordan", grades);
-//
-//        student.addGrade(98);
-//        student.addGrade(99);
-//        student.addGrade(94);
-//        System.out.println(student.getName());
-//        System.out.println(student.grades);
-//        System.out.println(student.getGradeAverage());
-//    }
     private String name;
     private ArrayList<Integer> grades;
+    private HashMap<String, String> attendance;
 
     public Student(String name){
         this.name = name;
         this.grades = new ArrayList<>();
+        this.attendance = new HashMap<>();
     }
 
     public String getName() {
@@ -37,4 +30,15 @@ public class Student {
         }
         return total / grades.size();
     }
+
+    public void recordAttendance(String date, String value) {
+        attendance.put(date, value);
+    }
+
+    public HashMap<String, String> getAttendance() {
+        return attendance;
+    }
+
+
+
 }
