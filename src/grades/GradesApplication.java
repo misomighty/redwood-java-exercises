@@ -82,9 +82,9 @@ public class GradesApplication {
 //                    daysAbsent(students, choice);
 
                     String choice = "MontealegreLuis";
-                    for (String item : students.get(choice).getAttendance().) {
-                        if (students.get(choice).getAttendance().containsValue("A")) {
-                            System.out.println(students.get(choice).getAttendance());
+                    for (String item : students.get(choice).getAttendance().keySet()) {
+                        if (students.get(choice).getAttendance().get(item).equals("A")) {
+                            System.out.println(item);
                         } else {
                             System.out.println("NO");
                         }

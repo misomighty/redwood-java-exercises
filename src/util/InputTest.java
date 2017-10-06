@@ -3,8 +3,9 @@ package util;
 
 public class InputTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Input input = new Input();
-        System.out.println(input.getInt(1, 20));
+        System.out.println(input.getBinary());
+        System.out.println(input.getHex());
     }
 }

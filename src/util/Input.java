@@ -1,4 +1,6 @@
 package util;
+import sun.tools.java.BinaryClass;
+
 import java.util.Scanner;
 
 public class Input {
@@ -30,12 +32,15 @@ public class Input {
     }
 
     public int getInt() {
-        if(scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("Invalid input");
+        System.out.println("Enter a number: ");
+        String a = scanner.nextLine();
+        try {
+            return Integer.valueOf(a);
+        } catch (NumberFormatException e) {
+            System.out.println("invalid number");
+        } catch (Exception e) {
+            return getInt();
         }
-
         return getInt();
     }
 
@@ -50,11 +55,14 @@ public class Input {
         return userInput;
     }
     public double getDouble() {
-        if(scanner.hasNextDouble()) {
-            double userDouble = scanner.nextDouble();
-            scanner.nextLine();
-            return userDouble;
-        } else {
+        // grab user input as a string
+        // parse the input as in Integer
+        // return the integer object
+        System.out.println("Enter a double: ");
+        try {
+            String userDouble = scanner.nextLine();
+            return Double.valueOf(userDouble);
+        } catch (Exception e) {
             System.out.println("Invalid input");
         }
         return getDouble();
@@ -70,6 +78,27 @@ public class Input {
         return userInput;
     }
 
+    public int getBinary() {
+
+        try {
+            int input = Integer.valueOf(getString("Enter a binary number: "), 2);
+            return input;
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+        }
+        return getBinary();
+    }
+
+    public int getHex() {
+        try {
+            int input = Integer.valueOf(getString("Enter a hexidecimal number;"), 16);
+            return input;
+        } catch (Exception e) {
+            System.out.println("Enter a hexidecimal number");
+            return getHex();
+        }
+
+    }
 
 
 

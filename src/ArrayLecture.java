@@ -1,6 +1,6 @@
 import util.Input;
 public class ArrayLecture {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Person[] people;
         people = new Person[4]; //the length, which is 1 greater than the highest index
 
